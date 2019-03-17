@@ -13,6 +13,9 @@ def searchAPI(query_str):
 	with ix.searcher(weighting=scoring.Frequency) as searcher:
 		query=MultifieldParser(["title","content"], ix.schema).parse(query_str)
 		results = searcher.search(query)
+		found = results.scored_length()
+		if(found == 0): 
+			return json.dumps({'status':'failure','description':'no data found'})
 		print(results[0]['title'])
 		print(results[0]['textdata'])
 		return json.dumps({'file':results[0]['title'],'data':results[0]['textdata']})
