@@ -18,6 +18,10 @@ def apiSearch():
   print(data)
   #response = json.dumps({'encodedImage':'hey jaga','searchKey':searchKey})
   return searchResult
+  
+@app.route("/api/startIndex",methods=['GET'])
+def apiIndex():
+  indexing.createSearchableData()
 
 
 if __name__ == '__main__':
