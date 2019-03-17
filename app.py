@@ -23,6 +23,7 @@ def apiSearch():
 def apiIndex():
   indexing.createSearchableData()
   response = json.dumps({'status':'success','description':'indexing successful'})
+  return response
 
 
 if __name__ == '__main__':
