@@ -1,3 +1,4 @@
+rq
 Flask==0.12.2
 Whoosh
 gunicorn
