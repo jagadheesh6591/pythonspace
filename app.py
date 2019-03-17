@@ -22,6 +22,7 @@ def apiSearch():
 @app.route("/api/startIndex",methods=['GET'])
 def apiIndex():
   indexing.createSearchableData()
+  response = json.dumps({'status':'success','description':'indexing successful'})
 
 
 if __name__ == '__main__':
