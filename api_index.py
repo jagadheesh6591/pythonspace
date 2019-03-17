@@ -20,7 +20,7 @@ def createSearchableData():
         fp = open(path,'r')
         print(path)
         text = fp.read()
-        writer.add_document(title=path.split("\\")[1], path=path,\
+        writer.add_document(title=path.split("/")[1], path=path,\
           content=text,textdata=text)
         fp.close()
     writer.commit()
