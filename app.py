@@ -1,7 +1,6 @@
 import time
 import json
 import base64
-import numpy as np
 from flask import Flask,request
 import api_index as indexing
 import search_api as search
